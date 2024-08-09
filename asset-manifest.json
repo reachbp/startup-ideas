@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/startup-ideas/static/css/main.95205ff4.chunk.css",
-    "main.js": "/startup-ideas/static/js/main.8f2ca2e6.chunk.js",
-    "main.js.map": "/startup-ideas/static/js/main.8f2ca2e6.chunk.js.map",
+    "main.js": "/startup-ideas/static/js/main.70c39027.chunk.js",
+    "main.js.map": "/startup-ideas/static/js/main.70c39027.chunk.js.map",
     "runtime-main.js": "/startup-ideas/static/js/runtime-main.53252ae6.js",
     "runtime-main.js.map": "/startup-ideas/static/js/runtime-main.53252ae6.js.map",
     "static/js/2.4ed5040c.chunk.js": "/startup-ideas/static/js/2.4ed5040c.chunk.js",
     "static/js/2.4ed5040c.chunk.js.map": "/startup-ideas/static/js/2.4ed5040c.chunk.js.map",
     "index.html": "/startup-ideas/index.html",
-    "precache-manifest.51d0bd2d5f215a2cceebffa4ef301d38.js": "/startup-ideas/precache-manifest.51d0bd2d5f215a2cceebffa4ef301d38.js",
+    "precache-manifest.cbddfa964a609b96729f73386c81a691.js": "/startup-ideas/precache-manifest.cbddfa964a609b96729f73386c81a691.js",
     "service-worker.js": "/startup-ideas/service-worker.js",
     "static/css/main.95205ff4.chunk.css.map": "/startup-ideas/static/css/main.95205ff4.chunk.css.map",
     "static/js/2.4ed5040c.chunk.js.LICENSE.txt": "/startup-ideas/static/js/2.4ed5040c.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.53252ae6.js",
     "static/js/2.4ed5040c.chunk.js",
     "static/css/main.95205ff4.chunk.css",
-    "static/js/main.8f2ca2e6.chunk.js"
+    "static/js/main.70c39027.chunk.js"
   ]
 }
