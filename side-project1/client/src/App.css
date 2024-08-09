@@ -1,6 +1,7 @@
- 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
+  font-family: 'Poppins',  sans-serif; /* Apply Helvetica */
     background-image: url('assets/images/background1.jpg'); /* Adjust the path as necessary */
     background-size: cover;
     background-position: center;
@@ -28,11 +29,24 @@ body {
     width: 90%;
     max-width: 700px;
     text-align: center;
+    font-family: 'Helvetica',  sans-serif; /* Apply Helvetica */
+    font-size: 18px;
+  }
+  
+  .idea-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 70%;
+    margin-right: 10px;
+    font-family: 'Poppins',  sans-serif; /* Apply Helvetica */
+    font-size: 18px;
   }
   
   h1 {
     margin-bottom: 20px;
     font-size: 24px;
+    font-family: 'Helvetica',  sans-serif; /* Apply Helvetica */
   }
   
   .table-container {
@@ -110,18 +124,54 @@ body {
     width: 70%;
     margin-right: 10px;
   }
+  .new-idea-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
   
-  .submit-button {
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Adds space between the buttons */
+    margin-top: 10px; /* Adds space between the input field and buttons */
+  }
+  
+  .submit-button, .share-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 20px;
-    background-color: #156bc7;
+    font-size: 16px;
     color: white;
-    border:  8px;
-    border-radius: 10px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    width: 150px;
+    font-family: 'Poppins', sans-serif; /* Apply the trendy font */
+  }
+  .submit-button {
+    background-color: #007bff;
   }
   
   .submit-button:hover {
     background-color: #0056b3;
+  }
+  
+  .share-button {
+    background-color: #1da1f2;
+  }
+  
+  .share-button:hover {
+    background-color: #0d8cd6;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
   }
   
   .translucent-form {
@@ -175,3 +225,13 @@ body {
     transform: translateY(20px);
     transition: opacity 1000ms, transform 1000ms;
   }
+
+  .input-error {
+    border: 2px solid red;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 5px;
+  }
+  

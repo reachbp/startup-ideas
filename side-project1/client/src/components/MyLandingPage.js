@@ -3,6 +3,8 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import '../App.css';
 import upvoteIcon from '../icons/thumbsup.svg';
 import downvoteIcon from '../icons/thumbdown.svg';
+import SubmitIcon from '../icons/submit.png';
+import ShareIcon from '../icons/tweet.svg';
 import axios from 'axios';
 
 const MyLandingPage = () => {
@@ -60,19 +62,43 @@ const MyLandingPage = () => {
     setNewIdea(event.target.value);
   };
 
+  const [errorMessage, setErrorMessage] = useState('');
+
   const handleNewIdeaSubmit = async (event) => {
     event.preventDefault();
+    setErrorMessage(''); // Clear previous error
+  
+    const trimmedIdea = newIdea.trim();
+    const isValidText = /^[a-zA-Z0-9 .,!?'":;()&@#-]+$/.test(trimmedIdea);
+
+  
+    if (trimmedIdea === '') {
+      setErrorMessage('Idea cannot be empty.');
+      return;
+    }
+    if (!isValidText) {
+        setErrorMessage('Idea contains invalid characters.');
+        return;
+      }
+
     try {
-      const response = await axios.post('https://startup-upvote-fa7d8216f031.herokuapp.com/ideas', { text: newIdea });
-      setIdeas(prevIdeas => {
-        const newIdeas = [...prevIdeas, response.data];
-        // Sort the new array based on upvotes
-        return newIdeas.sort((a, b) => b.upvotes - a.upvotes);
-      });
+      await axios.post('https://startup-upvote-fa7d8216f031.herokuapp.com/ideas', { text: trimmedIdea });
       setNewIdea('');
+      fetchIdeas();
     } catch (error) {
       console.error('Error submitting new idea:', error);
+      setErrorMessage('There was an error submitting your idea. Please try again.');
     }
+  };
+  
+
+  const shareOnTwitter = () => {
+    const url = encodeURIComponent('https://reachbp.github.io/startup-ideas');
+    const text = encodeURIComponent('Check out this awesome idea sharing platform!');
+    const hashtags = 'IdeaSharing,Startup';
+    const twitterUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}&hashtags=${hashtags}`;
+    
+    window.open(twitterUrl, '_blank');
   };
 
   return (
@@ -116,15 +142,27 @@ const MyLandingPage = () => {
             </tbody>
           </table>
         </div>
-        <form onSubmit={handleNewIdeaSubmit} className="new-idea-form translucent-form">
-          <input
-            type="text"
-            value={newIdea}
-            onChange={handleNewIdeaChange}
-            placeholder="Submit your idea"
-          />
-          <button type="submit" className="submit-button">Submit Your Idea</button>
-        </form>
+        <form onSubmit={handleNewIdeaSubmit} className="new-idea-form">
+  <input
+    type="text"
+    value={newIdea}
+    onChange={handleNewIdeaChange}
+    placeholder="Submit your idea"
+    className={`idea-input ${errorMessage ? 'input-error' : ''}`}
+  />
+  {errorMessage && <p className="error-message">{errorMessage}</p>}
+  <div className="button-container">
+    <button type="submit" className="submit-button">
+      <img src={SubmitIcon} alt="Submit" className="icon" />
+      Add your idea
+    </button>
+    <button type="button" onClick={shareOnTwitter} className="share-button">
+      <img src={ShareIcon} alt="Share on Twitter" className="icon" />
+      Tweet!
+    </button>
+  </div>
+</form>
+        
       </div>
     </div>
   );
