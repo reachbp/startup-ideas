@@ -15,7 +15,7 @@ const MyLandingPage = () => {
 
   const fetchIdeas = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/ideas');
+      const response = await axios.get('https://startup-upvote-fa7d8216f031.herokuapp.com/ideas');
       // Sort the fetched ideas by upvotes before setting the state
       const sortedIdeas = response.data.sort((a, b) => b.upvotes - a.upvotes);
       setIdeas(sortedIdeas);
@@ -26,7 +26,7 @@ const MyLandingPage = () => {
 
   const handleUpvote = async (id) => {
     try {
-      const response = await axios.patch(`http://localhost:5000/ideas/${id}/upvote`);
+      const response = await axios.patch(`https://startup-upvote-fa7d8216f031.herokuapp.com/ideas/${id}/upvote`);
       setIdeas(prevIdeas => {
         // Update the idea in the array
         const updatedIdeas = prevIdeas.map(idea => 
@@ -42,7 +42,7 @@ const MyLandingPage = () => {
 
   const handleDownvote = async (id) => {
     try {
-      const response = await axios.patch(`http://localhost:5000/ideas/${id}/downvote`);
+      const response = await axios.patch(`https://startup-upvote-fa7d8216f031.herokuapp.com/ideas/${id}/downvote`);
       setIdeas(prevIdeas => {
         // Update the idea in the array
         const updatedIdeas = prevIdeas.map(idea => 
@@ -63,7 +63,7 @@ const MyLandingPage = () => {
   const handleNewIdeaSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/ideas', { text: newIdea });
+      const response = await axios.post('https://startup-upvote-fa7d8216f031.herokuapp.com/ideas', { text: newIdea });
       setIdeas(prevIdeas => {
         const newIdeas = [...prevIdeas, response.data];
         // Sort the new array based on upvotes
