@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/startup-ideas/static/css/main.6e2a02fb.chunk.css",
+    "main.css": "/startup-ideas/static/css/main.bc59848c.chunk.css",
     "main.js": "/startup-ideas/static/js/main.70c39027.chunk.js",
     "main.js.map": "/startup-ideas/static/js/main.70c39027.chunk.js.map",
     "runtime-main.js": "/startup-ideas/static/js/runtime-main.53252ae6.js",
@@ -8,9 +8,9 @@
     "static/js/2.4ed5040c.chunk.js": "/startup-ideas/static/js/2.4ed5040c.chunk.js",
     "static/js/2.4ed5040c.chunk.js.map": "/startup-ideas/static/js/2.4ed5040c.chunk.js.map",
     "index.html": "/startup-ideas/index.html",
-    "precache-manifest.66a47116f036332b3d5d00947db9c19e.js": "/startup-ideas/precache-manifest.66a47116f036332b3d5d00947db9c19e.js",
+    "precache-manifest.3b0e552dc93354a2e027e52279fdc50c.js": "/startup-ideas/precache-manifest.3b0e552dc93354a2e027e52279fdc50c.js",
     "service-worker.js": "/startup-ideas/service-worker.js",
-    "static/css/main.6e2a02fb.chunk.css.map": "/startup-ideas/static/css/main.6e2a02fb.chunk.css.map",
+    "static/css/main.bc59848c.chunk.css.map": "/startup-ideas/static/css/main.bc59848c.chunk.css.map",
     "static/js/2.4ed5040c.chunk.js.LICENSE.txt": "/startup-ideas/static/js/2.4ed5040c.chunk.js.LICENSE.txt",
     "static/media/App.css": "/startup-ideas/static/media/background1.6239bc55.jpg",
     "static/media/thumbdown.svg": "/startup-ideas/static/media/thumbdown.d367c773.svg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.53252ae6.js",
     "static/js/2.4ed5040c.chunk.js",
-    "static/css/main.6e2a02fb.chunk.css",
+    "static/css/main.bc59848c.chunk.css",
     "static/js/main.70c39027.chunk.js"
   ]
 }
